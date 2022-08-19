@@ -15,8 +15,8 @@ import com.hfad.viewpager.model.ItemViewModel
 class SecondFragment : Fragment(R.layout.fragment_second) {
 
     private val binding by viewBinding(FragmentSecondBinding::bind)
-    lateinit var adapter: SecondAdapter
-    lateinit var recyclerView: RecyclerView
+    private lateinit var adapter: SecondAdapter
+    private lateinit var recyclerView: RecyclerView
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -36,17 +36,17 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
     private fun myItem(): ArrayList<ItemViewModel> {
         val itemList = ArrayList<ItemViewModel>()
 
-        val item1 = ItemViewModel("King", "Rabbit")
+        val item1 = ItemViewModel("Krol1", "Korol1")
         itemList.add(item1)
-        val item2 = ItemViewModel("King", "Rabbit")
+        val item2 = ItemViewModel("Krol", "Korol2")
         itemList.add(item2)
-        val item3 = ItemViewModel("King", "Rabbit")
+        val item3 = ItemViewModel("Krol3", "Korol3")
         itemList.add(item3)
-        val item4 = ItemViewModel("King", "Rabbit")
+        val item4 = ItemViewModel("Krol4", "Korol4")
         itemList.add(item4)
-        val item5 = ItemViewModel("King", "Rabbit")
+        val item5 = ItemViewModel("Krol5", "Korol5")
         itemList.add(item5)
-        val item6 = ItemViewModel("King", "Rabbit")
+        val item6 = ItemViewModel("Krol6", "Korol6")
         itemList.add(item6)
 
         return itemList

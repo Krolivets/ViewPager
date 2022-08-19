@@ -2,31 +2,40 @@ package com.hfad.viewpager.adapters
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.hfad.viewpager.R
+import com.hfad.viewpager.databinding.RecyclerviewItemBinding
 import com.hfad.viewpager.model.ItemViewModel
 
-class SecondAdapter() :
+class SecondAdapter :
     RecyclerView.Adapter<SecondAdapter.ItemViewHolder>() {
 
     private var itemList = emptyList<ItemViewModel>()
 
-    class ItemViewHolder(view: View) :
-        RecyclerView.ViewHolder(view)
+    class ItemViewHolder(private val binding: RecyclerviewItemBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+        fun bind(item: ItemViewModel) {
+            with(binding) {
+                tvLastName.text = item.lastName
+                tvFirstName.text = item.firstName
+            }
+        }
+    }
 
     override fun getItemCount() = itemList.size
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
-        var view =
-            LayoutInflater.from(parent.context).inflate(R.layout.fragment_second, parent, false)
-        return ItemViewHolder(view)
+        return ItemViewHolder(
+            RecyclerviewItemBinding.inflate(
+                LayoutInflater.from(parent.context),
+                parent,
+                false
+            )
+        )
     }
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
-        holder.itemView.tvLastName.text = itemList[position].lastName
-        holder.itemView.tvFirstName.text = itemList[position].firstName
+        holder.bind(itemList[position])
     }
 
     @SuppressLint("NotifyDataSetChanged")

@@ -2,15 +2,15 @@
     <!-- Base application theme. -->
     <style name="Theme.ViewPager" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <itemViewModel name="colorPrimary">@color/purple_500</itemViewModel>
-        <itemViewModel name="colorPrimaryVariant">@color/purple_700</itemViewModel>
-        <itemViewModel name="colorOnPrimary">@color/white</itemViewModel>
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
-        <itemViewModel name="colorSecondary">@color/teal_200</itemViewModel>
-        <itemViewModel name="colorSecondaryVariant">@color/teal_700</itemViewModel>
-        <itemViewModel name="colorOnSecondary">@color/black</itemViewModel>
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
-        <itemViewModel name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</itemViewModel>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
 </resources>
